@@ -9,6 +9,8 @@ public class Projectile : MonoBehaviour
 
     public GameObject explosion;
 
+    public int damageAmout = 10;
+
     void Start()
     {
         Invoke("DestroyFireball", lifetime);
@@ -25,5 +27,14 @@ public class Projectile : MonoBehaviour
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemy")
+        {
+            collision.GetComponent<Enemy>().TakeDamage(damageAmout);
+
+        }
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3955874584113751588}
   - component: {fileID: 3955874584113751589}
   - component: {fileID: 3955874584113751591}
+  - component: {fileID: 1872920695}
   m_Layer: 0
   m_Name: Fire Ball
   m_TagString: Untagged
@@ -98,3 +99,30 @@ MonoBehaviour:
   lifetime: 0.5
   explosion: {fileID: 1864346123829167535, guid: 4a94060b5a4b0ef4ea68293b4d4fa3a2,
     type: 3}
+  damageAmout: 10
+--- !u!61 &1872920695
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955874584113751586}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.7, y: 6.03}
+    newSize: {x: 4.7, y: 6.03}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.7, y: 6.03}
+  m_EdgeRadius: 0

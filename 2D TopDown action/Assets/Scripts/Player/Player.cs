@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     private Animator anim;
     private Vector2 moveAmout;
 
+    public int health = 40;
+
 
     void Start()
     {
@@ -36,5 +38,15 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveAmout * Time.deltaTime);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
